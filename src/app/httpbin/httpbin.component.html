@@ -1,0 +1,32 @@
+
+<div class="container" style="margin-top:30px ;height:1000px;">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="form-group">
+            <h3>HTTPBIN Functionalities:</h3>
+            <br>
+            <br>
+            <input type="button" class="btn btn-primary" (click)="getOriginIP()" value="Get Origin IP"><br><br>
+            <input type="button" class="btn btn-primary" (click)="getUtf8()" value="Get getUtf8"><br><br>
+            <input type="button" class="btn btn-primary" (click)="getBase64()" value="Get getBase64"/> <input type="text" class="form-control" placeholder="Base 64 value" [(ngModel)] = "Base64Data" width="300px"/><br> <br>
+            <input type="button" class="btn btn-primary" (click)="getGzip()" value="Get Gzip"><br><br>
+            <input type="button" class="btn btn-primary" (click)="getHTML()" value="Get HTML"><br><br>
+            <input type="button" class="btn btn-primary" (click)="getImageViaAcceptHeader()" value="Get Image Via Accept Header"><br><br>
+            <input type="button" class="btn btn-primary" (click)="getPNG()" value="Get Image PNG"><br><br>
+            <input type="button" class="btn btn-primary" (click)="getJPEG()" value="Get Image JPEG"><br><br>
+            <input type="button" class="btn btn-primary" (click)="getwebp()" value="Get Image WebP"><br><br>
+            <input type="button" class="btn btn-primary" (click)="getsvg()" value="Get Image Svg"><br><br>
+            <input type="button" class="btn btn-primary" (click)="getxml()" value="Get Xml"><br><br>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <h3>Results:</h3>
+      <br>
+      <br>
+      <label>{{OriginIP}}</label><br>
+      <label>{{Base64String}}</label><br>
+      <div [innerHTML]="Utf8Data"></div>
+      <div [innerHTML]="HTMLString"></div>
+    </div>
+  </div>
+</div>
